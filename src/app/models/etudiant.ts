@@ -6,5 +6,4 @@ export interface Etudiant{
     age?: number;
     email?: string;
     tel?: number;
-    user?:string;
 }

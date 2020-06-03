@@ -22,6 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListEtudiantComponent } from './list-etudiant/list-etudiant.component';
 import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
 import { DetailsEtudiantComponent } from './details-etudiant/details-etudiant.component';
+import { DiscussionComponent } from './discussion/discussion.component';
+import { TravauxComponent } from './travaux/travaux.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { DetailsEtudiantComponent } from './details-etudiant/details-etudiant.co
     ListEtudiantComponent,
     EditEtudiantComponent,
     DetailsEtudiantComponent,
-    AddEtudiantComponent
+    AddEtudiantComponent,
+    DiscussionComponent,
+    TravauxComponent
   ],
   imports: [
     BrowserModule,

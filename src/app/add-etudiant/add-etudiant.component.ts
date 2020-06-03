@@ -1,4 +1,3 @@
-import { AuthService } from './../services/auth.service';
 import { EtudiantService } from './../services/etudiant.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Etudiant } from '../models/etudiant';
@@ -19,19 +18,12 @@ export class AddEtudiantComponent implements OnInit {
     email:'',
     age:null,
     tel:null,
-    user:'',
   }
 
 
-  constructor(private etudiantService: EtudiantService,private authService: AuthService, private route: Router ) { }
+  constructor(private etudiantService: EtudiantService, private route: Router ) { }
 
-  ngOnInit(): void {
-    this.authService.getAuth().subscribe(auth => {
-      this.etudiant.user = auth.uid
-    })
-
-
-  }
+  ngOnInit(): void {}
 
   saveEtudiant(){
     this.etudiantService.newEtudiant(this.etudiant)

