@@ -2,13 +2,21 @@ import { Router } from '@angular/router';
 import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
+
+  /**
+   *
+   * @export
+   * @class RegisterComponent
+   * @implements {OnInit}
+   */
+  
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
- // nom:string;
+ 
   email:string;
   password:string;
 
@@ -16,8 +24,14 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  /**
+   * methode pour new Register
+   *
+   * @memberof RegisterComponent
+   */
 
-  onRegister(){
+onRegister(){
     this.authEtudiant.register(this.email, this.password)
     .then(register =>{
         this.Route.navigate(['/'])

@@ -3,6 +3,9 @@ import { EtudiantService } from './../services/etudiant.service';
 import { Etudiant } from '../models/etudiant';
 import { ActivatedRoute, Router } from '@angular/router';
 
+/**
+ * Edit etudiant component
+ */
 
 @Component({
   selector: 'app-edit-etudiant',
@@ -22,6 +25,12 @@ export class EditEtudiantComponent implements OnInit {
 
   constructor(private etudiantService: EtudiantService, private route: ActivatedRoute, private router: Router) { }
 
+  
+  /**
+   * Recupere etidiant Id
+   * @memberof EditEtudiantComponent
+   */
+
   ngOnInit(): void {
     // récupérer Id
     this.id = this.route.snapshot.params['id'];
@@ -32,11 +41,14 @@ export class EditEtudiantComponent implements OnInit {
       console.log(this.etudiant)
     })
   }
-  // Methode pour Update Etudiant
+
+  /**
+   * Update etudiant methode
+   */
+
   saveEtudiant(){
     this.etudiant.id = this.id;
     this.etudiantService.updateEtudiant(this.etudiant);
-    //Redireger vers la liste des Etudiants
     this.router.navigate(['/etudiant/', this.id])
   }
 

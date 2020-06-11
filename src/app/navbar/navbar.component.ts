@@ -2,6 +2,15 @@ import { Router } from '@angular/router';
 import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
+
+/**
+ * Create by Belaid ATIF
+ * 
+ * @export
+ * @class NavbarComponent
+ * @implements {OnInit}
+ */
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -24,10 +33,17 @@ export class NavbarComponent implements OnInit {
       }
     })
   }
-
-  onLogOut(){
+  
+  /**
+   * onLogout methode
+   *
+   * @returns
+   * @memberof NavbarComponent
+   */
+  
+onLogOut(){
     this.authService.logOut()
-    return this.route.navigate(['/login'])
+    return this.route.navigate(['/'])
   }
 
 }

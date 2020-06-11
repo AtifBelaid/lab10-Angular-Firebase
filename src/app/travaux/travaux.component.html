@@ -1,1 +1,52 @@
-<p>travaux works!</p>
+<div class="row m-3 ">
+    <div class="col-md-2 offset-md-10">
+        <a routerLink="/travaux/add" class="btn btn-success">
+            <i class="fa fa-plus" aria-hidden="true"></i> New Devoire
+        </a>
+    </div>    
+</div>
+
+
+
+  <!-- Card -->
+<div class="card promoting-card" *ngFor="let devoir of devoirs">
+
+    <div class="card-header">
+        <strong> {{devoir.title}} </strong>
+    </div> <br>
+    <!-- Card image -->
+    <div class="d-flex justify-content-center ">
+            <iframe width="560" height="315" [src]="getYtbEmbedUrl(devoir.ytbUrl) | safeUrl" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+  
+    <!-- Card content -->
+    <div class="card-body">
+  
+      <div class="collapse-content">
+  
+        <!-- Text -->
+        <p>{{devoir.description}}</p>
+        <!-- Button -->
+        <div class="btn-group float-right" role="group" aria-label="Basic example">
+
+            <div class="btn btn-danger" routerLink="">
+                <i class="fa fa-pencil" aria-hidden="true"></i>Edit
+
+            </div>
+         
+            <div class="btn btn-dark" (click)="deletDevoir(id)">
+                <i class="fa fa-trash" aria-hidden="true"></i>Delete
+            </div>
+          </div>
+  
+      </div>
+  
+    </div>
+  
+  </div>
+  <!-- Card -->
+
+
+

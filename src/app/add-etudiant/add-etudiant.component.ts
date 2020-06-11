@@ -3,6 +3,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Etudiant } from '../models/etudiant';
 import { Router } from '@angular/router';
 
+/**
+ * Add etudiant Component
+ */
+
 @Component({
   selector: 'app-add-etudiant',
   templateUrl: './add-etudiant.component.html',
@@ -10,9 +14,7 @@ import { Router } from '@angular/router';
 })
 export class AddEtudiantComponent implements OnInit {
 
-  // (1)Create DataBinding
   etudiant: Etudiant = {
-    id:'',
     nom:'',
     prenom:'',
     email:'',
@@ -25,10 +27,14 @@ export class AddEtudiantComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /**
+   * submit addEtudiant component
+   */
+
   saveEtudiant(){
     this.etudiantService.newEtudiant(this.etudiant)
 
-    return this.route.navigate(['/']);
+    return this.route.navigate(['/dashboard']);
   
   }
 

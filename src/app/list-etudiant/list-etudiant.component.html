@@ -14,6 +14,7 @@
         <h4 class="card-title">List Etudiants</h4>
         <input #query (keyup)="search(query.value)" type="text" class="form-control" placeholder="Search...">
         
+        
         <table class="table table-striped">
             <thead >
                 <tr>
@@ -28,13 +29,13 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let etudiant of searchEtudiants">
-                        <td scope="row">{{etudiant.nom}}</td>
+                        <td scope="row">{{ etudiant.nom }}</td>
                         <td>{{etudiant.prenom}}</td>
                         <td>{{etudiant.age}}</td>
                         <td>{{etudiant.tel}}</td>
                         <td>{{etudiant.email}}</td>
                         <td class="text-right">
-                            <a routerLink="/etudiant/{{ etudiant.id }}" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i> </a>
+                            <a routerLink="/etudiant/{{ etudiant.id}}" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i> </a>
                         </td>
                         <td>
                             <a routerLink="/etudiant/edit/{{ etudiant.id }}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
